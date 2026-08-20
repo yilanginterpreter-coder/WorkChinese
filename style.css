@@ -43,41 +43,12 @@ button{font-family:inherit}
 .section-title span{font-size:13px;color:#6B7280}
 
 /* 6. CARD PUTIH JADI CREAM MUDA */
-.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-
-.category-card{
-  background:#FFF0D9;
-  border-radius:18px;
-  padding:28px 20px;
-  box-shadow:0 5px 18px rgba(0,0,0,.05);
-  cursor:pointer;
-  transition:.2s;
-  border:1px solid #E6D3B3;
-  display:flex; /* TAMBAH INI */
-  flex-direction:column; /* BIAR KE BAWAH */
-  align-items:center; /* TENGAHIN */
-  text-align:center; /* TEKS TENGAH */
-  gap:14px; /* JARAK ICON KE TEKS */
-}
+.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.category-card{background:#FFF0D9;border-radius:16px;padding:25px;box-shadow:0 5px 18px rgba(0,0,0,.05);cursor:pointer;transition:.2s;border:1px solid #E6D3B3}
 .category-card:hover{transform:translateY(-4px);box-shadow:0 10px 25px rgba(0,0,0,.1)}
-
-.category-card svg{
-  width:60px; /* BIKIN GEDE KAYAK SUPERCHINESE */
-  height:60px;
-  margin-bottom:4px;
-}
-.category-card h3{
-  font-size:17px;
-  margin:0;
-  color:#1F1F1F;
-  font-weight:700;
-}
-.category-card p{
-  font-family:'Noto Sans SC',sans-serif;
-  color:#6B7280;
-  font-size:13px;
-  margin:0;
-}
+.category-card i{font-size:27px;color:#D97706;margin-bottom:18px} /* ikon default oranye */
+.category-card h3{font-size:17px;margin-bottom:6px;color:#1F1F1F}
+.category-card p{font-family:'Noto Sans SC',sans-serif;color:#6B7280;font-size:13px}
 
 .progress-card{background:#FFF0D9;border-radius:16px;padding:24px;box-shadow:0 5px 18px rgba(0,0,0,.05)}
 .progress-info{display:flex;justify-content:space-between;margin-bottom:12px}
@@ -100,8 +71,3 @@ button{font-family:inherit}
 
 @media(max-width:1100px){.category-grid{grid-template-columns:repeat(2,1fr)}.lesson-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.sidebar{width:70px;padding:15px 8px}.logo{padding:0;justify-content:center}.logo span,.nav-item span{display:none}.nav-item{justify-content:center;padding:14px}.main{margin-left:70px;width:calc(100% - 70px);padding:22px}.welcome{padding:28px}.welcome h2{font-size:26px}.welcome-icon{display:none}.category-grid,.lesson-grid{grid-template-columns:1fr}.header h1{font-size:24px}.level{display:none}}
-@media(max-width:768px){
-  .nav-item{flex-direction:column; gap:6px; padding:12px 8px}
-  .nav-item svg{width:28px; height:28px}
-  .nav-item span{font-size:11px}
-}
