@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkChinese</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
 
+<div class="app">
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-language"></i>
+            <span>WorkChinese</span>
+        </div>
+        <nav>
+            <button class="nav-item active" onclick="showPage('dashboard')"><i class="fa-solid fa-house"></i><span>Dashboard</span></button>
+            <button class="nav-item" onclick="showPage('office')"><i class="fa-solid fa-building"></i><span>Perkantoran</span></button>
+            <button class="nav-item" onclick="showPage('manufacturing')"><i class="fa-solid fa-industry"></i><span>Manufaktur</span></button>
+            <button class="nav-item" onclick="showPage('mining')"><i class="fa-solid fa-mountain"></i><span>Pertambangan</span></button>
+            <button class="nav-item" onclick="showPage('logistics')"><i class="fa-solid fa-truck"></i><span>Logistik</span></button>
+            <button class="nav-item" onclick="showPage('vocabulary')"><i class="fa-solid fa-book"></i><span>Kosakata</span></button>
+            <button class="nav-item" onclick="showPage('conversation')"><i class="fa-solid fa-comments"></i><span>Percakapan</span></button>
+            <button class="nav-item" onclick="showPage('quiz')"><i class="fa-solid fa-pen-to-square"></i><span>Quiz</span></button>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <header class="header">
+            <div>
+                <h1>WorkChinese</h1>
+                <p>专业中文 · Bahasa Mandarin Profesional</p>
+            </div>
+            <div class="profile">
+                <div class="level">HSK 5</div>
+                <div class="avatar">Y</div>
+            </div>
+        </header>
+
+        <section id="dashboard" class="page active">
+            <div class="welcome">
+                <div>
+                    <span class="badge">WORKPLACE CHINESE</span>
+                    <h2>Mandarin untuk dunia kerja.</h2>
+                    <p>Belajar bahasa Mandarin yang benar-benar digunakan di kantor, manufaktur, pertambangan, logistik, dan lingkungan kerja profesional.</p>
+                    <button class="primary-btn" onclick="showPage('office')"><i class="fa-solid fa-play"></i> Mulai Belajar</button>
+                </div>
+                <div class="welcome-icon"><i class="fa-solid fa-language"></i></div>
+            </div>
+
+            <div class="section-title">
+                <h2>Bidang Pembelajaran</h2>
+                <span>专业领域</span>
+            </div>
+
+            <div class="category-grid">
+                <div class="category-card" onclick="showPage('office')"><i class="fa-solid fa-building"></i><h3>Perkantoran</h3><p>办公室中文</p></div>
+                <div class="category-card" onclick="showPage('manufacturing')"><i class="fa-solid fa-industry"></i><h3>Manufaktur</h3><p>制造业中文</p></div>
+                <div class="category-card" onclick="showPage('mining')"><i class="fa-solid fa-mountain"></i><h3>Pertambangan</h3><p>矿业中文</p></div>
+                <div class="category-card" onclick="showPage('logistics')"><i class="fa-solid fa-truck"></i><h3>Logistik</h3><p>物流中文</p></div>
+            </div>
+
+            <div class="section-title">
+                <h2>Progress Belajar</h2>
+                <span>学习进度</span>
+            </div>
+
+            <div class="progress-card">
+                <div class="progress-info"><span>Level Profesional</span><strong>0%</strong></div>
+                <div class="progress-bar"><div></div></div>
+                <p>Mulai pelajaran pertama untuk membangun kemampuan Mandarin profesionalmu.</p>
+            </div>
+        </section>
+
+        <section id="office" class="page">
+            <div class="page-title"><h2>Perkantoran · 办公室</h2><p>Mandarin yang digunakan dalam lingkungan kantor.</p></div>
+            <div class="lesson-grid" id="officeLessons"></div>
+        </section>
+
+        <section id="manufacturing" class="page">
+            <div class="page-title"><h2>Manufaktur · 制造业</h2><p>Bahasa Mandarin untuk produksi dan operasional pabrik.</p></div>
+            <div class="lesson-grid" id="manufacturingLessons"></div>
+        </section>
+
+        <section id="mining" class="page">
+            <div class="page-title"><h2>Pertambangan · 矿业</h2><p>Bahasa Mandarin untuk lingkungan kerja pertambangan.</p></div>
+            <div class="lesson-grid" id="miningLessons"></div>
+        </section>
+
+        <section id="logistics" class="page">
+            <div class="page-title"><h2>Logistik · 物流</h2><p>Bahasa Mandarin untuk warehouse, transportasi, dan supply chain.</p></div>
+            <div class="lesson-grid" id="logisticsLessons"></div>
+        </section>
+
+        <section id="vocabulary" class="page">
+            <div class="page-title"><h2>Kosakata · 词汇</h2><p>Kosakata profesional berdasarkan bidang pekerjaan.</p></div>
+            <div class="vocabulary-box" id="vocabularyList"></div>
+        </section>
+
+        <section id="conversation" class="page">
+            <div class="page-title"><h2>Percakapan · 对话</h2><p>Simulasi percakapan yang sering terjadi di tempat kerja.</p></div>
+            <div class="conversation-box" id="conversationList"></div>
+        </section>
+
+        <section id="quiz" class="page">
+            <div class="page-title"><h2>Quiz · 测验</h2><p>Uji kemampuan Mandarin profesionalmu.</p></div>
+            <div class="quiz-box" id="quizContent"></div>
+        </section>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
